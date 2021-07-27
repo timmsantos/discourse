@@ -46,6 +46,9 @@ class ImportScripts::Generic < ImportScripts::Base
           location: row["location"],
           admin: to_boolean(row["admin"]),
           moderator: to_boolean(row["moderator"]),
+          suspended_at: to_datetime(row["suspended_at"]),
+          suspended_till: to_datetime(row["suspended_till"]),
+          staged: to_boolean(row["staged"]),
           post_create_action: proc do |user|
             create_avatar(user, row["avatar_path"])
           end
