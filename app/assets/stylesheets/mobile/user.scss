@@ -32,7 +32,7 @@
 
   // specific to messages
 
-  .user-messages.user-messages-inboxes {
+  .user-messages {
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -40,6 +40,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+
+    &.user-messages-inboxes {
+      // when there are multiple inboxes
+      .messages-nav {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+      }
+    }
 
     + .user-additional-controls {
       grid-row-start: 2;
@@ -63,11 +72,6 @@
     }
   }
 
-  .messages-nav {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-  }
 
   .new-private-message {
     grid-row-start: 1;
