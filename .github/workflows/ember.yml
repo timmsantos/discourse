@@ -38,7 +38,7 @@ jobs:
 
       - name: Yarn install
         working-directory: ./app/assets/javascripts/discourse
-        run: sudo -E -u discourse -H yarn install
+        run: chown -R discourse . && sudo -E -u discourse -H yarn install
 
       - name: Core QUnit
         working-directory: ./app/assets/javascripts/discourse
