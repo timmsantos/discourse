@@ -183,27 +183,28 @@
 
   .future-date-input {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1fr;
 
     .control-group:nth-child(1) {
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: -1;
     }
+
     .control-group:nth-child(2) {
       margin-left: 1.75em;
-      margin-right: 1.5em;
     }
+
     .control-group:nth-child(2),
     .control-group:nth-child(3) {
-      grid-row-start: 2;
       display: inline-flex;
       align-items: center;
       margin-bottom: 0;
+
       input {
         height: 100%;
         margin-bottom: 0;
         margin-left: 0.5em;
-        width: 150px;
+        width: 100%;
       }
     }
   }
